@@ -1,21 +1,22 @@
-import Footer from "@/components/footer"
-import Header from "@/components/header"
-import { Container } from "lucide-react"
-import { Outlet } from "react-router-dom"
+
+import { Container } from "@/components/container";
+import { Footer } from "@/components/footer";
+
+import Header from "@/components/header";
+import { Outlet } from "react-router-dom";
 
 export const MainLayout = () => {
   return (
     <div className="flex flex-col h-screen">
+      <Header />
 
-        <Header />
-
-        <Container className="flex-grow">
+      <Container className="flex-grow">
         <main className="flex-grow">
-        <Outlet/>
+          <Outlet />
         </main>
-        </Container>
+      </Container>
 
-        <Footer />
+      <Footer />
     </div>
-  )
-}
+  );
+};
